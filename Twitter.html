@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>MyTWITTER.com</title>
+</head>
+<style>
+  
+  body {
+    height: 3000px;
+    padding-left: 311px;
+    margin: 0%;
+
+    max-width: 100%;
+    overflow-x: hidden;
+
+  }
+
+  @media (max-width: 850px) {
+    .Grid {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+  .header {
+    display: flex;
+    height: 52px;
+    flex-direction: row;
+
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.979);
+    z-index: 1000;
+  }
+
+  .left-header {
+
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    border-top-width: 0px;
+    border-color: rgb(209, 202, 202);
+    display: grid;
+    grid-template-columns: 230px 230px 52px;
+    text-align: center;
+    font-family: roboto, arial;
+  }
+
+  .lh1 {
+    padding-top: 15px;
+
+  }
+
+  .lh1:hover {
+    cursor: pointer;
+    background-color: rgb(226, 224, 224);
+  }
+
+  .lh2 {
+    padding-top: 15px;
+
+  }
+
+  .lh2:hover {
+    cursor: pointer;
+    background-color: rgb(226, 224, 224);
+  }
+
+  .right-header {
+    font-family: roboto, arial;
+    padding-right: 500px;
+
+  }
+
+  .settings {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-left: 12px;
+    text-align: center;
+    margin-top: 10px;
+    border: none;
+  }
+
+  .settings:hover {
+    background-color: rgb(226, 224, 224);
+  }
+
+  .settings-pic {
+    height: 16px;
+
+  }
+
+  .info-search {
+
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-bar {
+    margin-left: 15px;
+  }
+
+  .search-box {
+    width: 299px;
+    padding-left: 20px;
+    height: 40px;
+    font-size: 16px;
+    margin-left: -5px;
+    border: none;
+    border-radius: 30px;
+    font-family: roboto, arial;
+    font-weight: 500;
+    background-color: rgb(241, 236, 236);
+  }
+
+  .search-button {
+    height: 42px;
+    width: 66px;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    margin-right: -30px;
+    background-color: rgb(241, 236, 236);
+
+  }
+
+  .search-icon {
+    height: 15px;
+
+
+  }
+
+  .Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+
+  }
+
+
+
+
+  .PAGE {
+    background-color: inherit;
+
+  }
+
+  .PAGE :hover {
+    cursor: pointer;
+
+  }
+
+  .Tweet-area {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    border-style: solid;
+    border-width: 1px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-color: rgb(209, 202, 202);
+    padding-left: 12px;
+
+
+  }
+
+
+  .menu-pp {
+    height: 40px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-left: -4px;
+    max-width: 100%;
+  }
+
+  .menu-pp1 :hover {
+    cursor: pointer;
+  }
+
+  .menu-pp1 {
+
+    padding-top: 10px;
+    margin-right: 7px;
+
+
+  }
+
+  .text-side {
+    display: inline-block;
+
+    padding-top: 15px;
+    margin-left: 0px;
+  }
+
+  .paragraph {
+    display: inline-block;
+
+  }
+
+  .placeholder1 {
+    font-family: roboto, arial;
+    width: 30vw;
+    font-size: larger;
+    font-family: roboto, arial;
+    border: none;
+    outline: none;
+  }
+
+  .placeholder1:hover {
+    border: none;
+    cursor: text;
+  }
+
+
+
+  .lower {
+    height: 50px;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 0;
+
+  }
+
+  .texts-edits1 {
+
+
+    height: 20px;
+    width: 220px;
+    display: flex;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .edits {
+    display: inline-block;
+  }
+
+  .effects {
+    height: 17px;
+    margin-right: 15px;
+
+  }
+
+  .post-div {
+    margin-left: 185px;
+    margin-top: -5px;
+  }
+
+  .post-b {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: #1d9bf0;
+    font-family: roboto, arial;
+
+  }
+
+  .tweet1 {
+    font-family: roboto, arial;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-width: 0px;
+    border-color: rgb(209, 202, 202);
+    padding-left: 12px;
+    line-height: 18px;
+    font-size: 15px;
+  }
+
+  .tweet-contents {
+    background-color: white;
+
+  }
+
+  .tweet-contents :hover {
+    cursor: pointer;
+  }
+
+  .user-name {
+    font-weight: bold;
+    margin-bottom: 0;
+    font-family: roboto, arial;
+
+  }
+
+  .handle {
+    color: gray;
+  }
+
+  .atweet {
+    margin-top: 0;
+    width: 450px;
+  }
+
+  .reactions {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-bottom: 12px;
+
+  }
+
+  .tweet-reactions {
+    height: 19px;
+    vertical-align: text-bottom;
+    font-size: 12px;
+
+  }
+
+  .tweet-reactions1 {
+    height: 30px;
+    width: 30px;
+    vertical-align: text-bottom;
+    font-size: 12px;
+    background: rgba(173, 216, 230, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+
+  .tweet-reactions1:hover {
+    background: rgba(173, 216, 230, 0.7);
+    cursor: pointer;
+
+  }
+
+  .tweet-reactions1 .tooltip {
+    position: absolute;
+    background-color: transparent;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+    margin-top: 60px;
+    margin-left: 70px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none;
+    font-size: 15px;
+  }
+
+  .tweet-reactions1:hover .tooltip {
+    opacity: 1;
+  }
+
+  .tweet-reactions2 {
+    height: 30px;
+    width: 30px;
+    vertical-align: text-bottom;
+    font-size: 12px;
+    background: rgba(176, 235, 225, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+
+  .tweet-reactions2:hover {
+    background: rgba(176, 235, 225, 0.7);
+    cursor: pointer;
+
+  }
+
+  .tweet-reactions2 .tooltip {
+    position: absolute;
+    background-color: transparent;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+    margin-top: 50px;
+    margin-left: 50px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none;
+    font-size: 15px;
+  }
+
+  .tweet-reactions2:hover .tooltip {
+    opacity: 1;
+  }
+
+  .tweet-reactions3 {
+    height: 30px;
+    width: 30px;
+    vertical-align: text-bottom;
+    font-size: 12px;
+    background: rgba(255, 192, 200, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+
+  .tweet-reactions3:hover {
+    background: rgba(255, 192, 200, 0.7);
+    cursor: pointer;
+
+  }
+
+  .tweet-reactions3 .tooltip {
+    position: absolute;
+    background-color: transparent;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+    margin-top: 50px;
+    margin-left: 50px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none;
+    font-size: 15px;
+  }
+
+  .tweet-reactions3:hover .tooltip {
+    opacity: 1;
+  }
+
+  .tweet-reactions4 {
+    height: 30px;
+    width: 30px;
+    vertical-align: text-bottom;
+    font-size: 12px;
+    background: rgba(81, 135, 235, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+
+  .tweet-reactions4:hover {
+    background: rgba(142, 178, 245, 0.7);
+    cursor: pointer;
+
+  }
+
+  .tweet-reactions4 .tooltip {
+    position: absolute;
+    background-color: transparent;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+    margin-top: 60px;
+    margin-left: 70px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none;
+    font-size: 15px;
+  }
+
+  .tweet-reactions4:hover .tooltip {
+    opacity: 1;
+  }
+
+  .b-s {
+    display: flex;
+
+  }
+
+  .tl-picture {
+    width: 420px;
+    border-radius: 18px;
+    padding-bottom: 10px;
+    max-width: 100%;
+  }
+
+  .INFO {
+
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .subscribe {
+    height: 155px;
+    width: 350px;
+    background-color: rgb(241, 236, 236);
+    margin-left: 35px;
+    font-family: roboto, arial;
+    margin-right: 500px;
+    border-radius: 10px;
+    padding-top: 2px;
+    margin-top: 9px;
+
+  }
+
+  .cons {
+    margin-left: 15px;
+    line-height: 17px;
+
+  }
+
+  .head {
+    font-weight: bold;
+    font-size: large;
+    font-family: roboto, arial;
+  }
+
+  .contents {
+    font-size: small;
+    color: gray;
+    width: 250px;
+    font-family: roboto, arial;
+  }
+
+  .sub-butt {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 50px;
+    border: none;
+    font-family: roboto, arial;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+  }
+
+  .sub-butt:hover {
+    cursor: pointer;
+
+  }
+
+  .trends-list {
+    background-color: rgb(241, 236, 236);
+    width: 350px;
+    height: 750px;
+    margin-left: 1px;
+    border-radius: 10px;
+    margin-top: 45px;
+    padding-left: 0;
+  }
+
+  .head-trends {
+    padding-left: 15px;
+    font-weight: bold;
+    font-size: larger;
+    padding-top: 15px;
+
+  }
+
+  .trends-contents {
+
+    padding-left: 0px;
+  }
+
+  .trends {
+
+    height: 80px;
+    line-height: 5px;
+    padding-top: 10px;
+    padding-left: 15px;
+  }
+
+  .trends:hover {
+    cursor: pointer;
+    background-color: #dad9d9;
+  }
+
+  .activity {
+
+    color: gray;
+
+  }
+
+  .t-name {
+    font-weight: bold;
+    font-size: large;
+    font-family: roboto, arial;
+
+  }
+
+  .posts {
+    color: gray;
+  }
+
+  .show {
+    color: #1d9bf0;
+  }
+
+  .show:hover {
+    cursor: pointer;
+    color: #0d67a7;
+  }
+
+  .menu-sidebar {
+
+    position: fixed;
+    left: 0;
+    bottom: 1px;
+    top: 0;
+    padding-right: 25px;
+
+  }
+
+  .sidebar-link {
+    height: 55px;
+
+    margin-left: 1px;
+    display: flex;
+    align-items: center;
+
+
+    margin-bottom: 2px;
+  }
+
+  .sidebar-link:hover {
+    cursor: pointer;
+    background-color: #f1f1f1;
+
+    border-radius: 100px;
+
+  }
+
+
+  .sidebar-link div {
+    font-size: 20.5px;
+  }
+
+  .logo {
+    height: 38px;
+
+
+    margin-top: 8px;
+
+  }
+
+  .logo-container {
+    display: inline-block;
+    margin-left: 48px;
+    border-radius: 100%;
+    height: 57px;
+    width: 57px;
+    text-align: center;
+  }
+
+  .logo-container:hover {
+    cursor: pointer;
+    background-color: #dad9d9;
+    border-radius: 70px;
+  }
+
+  .icons {
+    height: 26px;
+    padding-right: 19px;
+    padding-left: 60px;
+    font-weight: bolder;
+
+  }
+
+
+  .post {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 40px;
+    margin-left: 40px;
+    color: white;
+
+    font-weight: bold;
+    font-size: large;
+    background-color: #1d9bf0;
+    border: none;
+    transition: 0.9s;
+  }
+
+  .post:hover {
+    cursor: pointer;
+    background-color: #0d67a7;
+    color: white;
+  }
+
+  .menu-profile {
+    background-color: white;
+    display: flex;
+    line-height: 24px;
+    margin-top: 50px;
+    margin-left: 53px;
+  }
+
+  .menu-p-details {
+    background-color: white;
+  }
+
+  .menu-pp {
+    height: 52px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .menu-pp-name {
+    font-family: roboto, arial;
+    font-weight: bold;
+  }
+
+  .menu-pp-handle {
+
+    color: gray;
+  }
+
+  .menu-dots {
+    font-weight: bold;
+    font-size: large;
+    padding-top: 6px;
+    margin-left: 30px;
+  }
+
+  form {
+    color: #555;
+    display: flex;
+    padding: 2px;
+
+    border-radius: 25px;
+    margin-left: 33px;
+    margin-right: 18px;
+    margin-top: 5px;
+    background-color: rgb(241, 236, 236);
+  }
+
+
+  input[type="search"] {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 16px;
+    color: inherit;
+
+
+    padding-right: 100px;
+  }
+
+  input[type="search"]::placeholder {
+    color: #bbb;
+  }
+
+
+  .button {
+    background: transparent;
+    overflow: hidden;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+
+    cursor: pointer;
+
+  }
+
+  button [type="submit"] {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  button[type="submit"]:hover {
+    opacity: 1;
+  }
+
+  button[type="submit"] :focus,
+  input[type="search"]:focus {
+    box-shadow: 0 0 3px 0 #1183d6;
+    border-color: #1183d6;
+    outline: none;
+
+  }
+
+  .settings .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+    bottom: -9px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none;
+  }
+
+  .settings:hover .tooltip {
+    opacity: 1;
+  }
+
+  .follow-suggestions {
+    background-color: rgb(241, 236, 236);
+    height: 270px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-left: 2px;
+    width: 350px;
+  }
+
+  .account-suggestions {
+
+    margin-bottom: 5px;
+    padding-left: 15px;
+  }
+
+
+
+
+  .follow-pp {
+    height: 50px;
+    border-radius: 25px;
+    display: inline-block;
+
+  }
+
+  .account-suggestions :hover {
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <div>
+    <div class="header">
+      <div class="left-header">
+        <div class="lh1">For you</div>
+        <div class="lh2">Following</div><button class="settings">
+          <img class="settings-pic" src="../tweet/settings (1).png" alt="" />
+          <div class="tooltip">Timeline settings</div>
+        </button>
+      </div>
+      <div class="right-header">
+        <form action="">
+          <button class="button" type="submit"><img class="search-icon" src="../images/search-interface-symbol.png"
+              alt=""></button>
+          <input type="Search" placeholder="Search">
+        </form>
+
+
+
+      </div>
+    </div>
+    <div class="menu-sidebar">
+      <div class="logo-container">
+        <img class="logo" src="../tweet/new-twitter-x-logo-transparent-png-4.png" alt="">
+      </div>
+      <div>
+
+        <div class="sidebar-link"> <img class="icons" src="../images/home-button.png" alt="" />
+          <p style=" font-size: 20.5px;">Home</p>
+        </div>
+
+
+        <div class="sidebar-link"><img class="icons" src="../images/search-interface-symbol.png" alt="" />
+          <p style=" font-size: 20.5px;">Explore</p>
+        </div>
+        <div class="sidebar-link">
+          <img class="icons" src="../images/notification-bell.png" alt="" />
+          <p style=" font-size: 20.5px;">Notifications</p>
+        </div>
+        <div class="sidebar-link">
+          <img class="icons" src="../images/email.png" alt="" />
+          <p style=" font-size: 20.5px;">Messages</p>
+        </div>
+        <div class="sidebar-link">
+          <img class="icons" src="../images/slash.png" alt="" />
+          <p style=" font-size: 20.5px;">Grok</p>
+        </div>
+        <div class="sidebar-link"><img class="icons" src="../images/list.png" alt="" />
+          <p style=" font-size: 20.5px;">Profile</p>
+        </div>
+
+        <div class="sidebar-link">
+          <img class="icons" src="../images/more.png" alt="" />
+          <p style=" font-size: 20.5px;">More</p>
+
+        </div>
+        <button class="post">Post</button>
+      </div>
+
+      <div class="menu-profile">
+        <div><img class="menu-pp" src="../images/my pp.jpg" alt="" /></div>
+        <div class="menu-p-details">
+          <div class="menu-pp-name">kofi.e.a</div>
+          <div class="menu-pp-handle">@KofiAyiteyyyyyy</div>
+        </div>
+        <div class="menu-dots">&hellip;</div>
+      </div>
+    </div>
+
+    <div class="Grid">
+      <div class="PAGE">
+
+        <div class="Tweet-area">
+
+          <div class="menu-pp1">
+            <img class="menu-pp" src="../images/my pp.jpg" alt="" />
+          </div>
+          <div class="text-side">
+            <div class="paragraph">
+              <!--COMMENT= this line of code is used to make the text area of a placeholder fill the width-->
+              <textarea class="placeholder1" name="text" id="tweets" placeholder="What is happening?!"></textarea>
+
+
+
+
+            </div>
+            <div class="lower">
+              <div class="texts-edits1">
+                <div class="edits">
+                  <img class="effects" src="../tweet/icons8-add-image-48.png" alt="" />
+                </div>
+                <div class="edits">
+                  <img class="effects" src="../tweet/icons8-gif-26.png" alt="" />
+                </div>
+                <div class="edits">
+                  <img class="effects" src="../tweet/icons8-checklist-64.png" alt="" />
+                </div>
+                <div class="edits">
+                  <img class="effects" src="../tweet/icons8-happy-50.png" alt="" />
+                </div>
+                <div class="edits">
+                  <img class="effects" src="../tweet/icons8-schedule-64.png" alt="" />
+                </div>
+                <div class="edits">
+                  <img class="effects" src="../tweet/icons8-location-50.png" alt="" />
+                </div>
+                <div class="post-div"><button class="post-b">Post</button></div>
+              </div>
+            </div>
+            <div class="post-button"></div>
+          </div>
+        </div>
+        <div class="tweet1">
+          <div class="menu-pp1"> <img class="menu-pp" src="../images/kalyjay.jpg" alt=""></div>
+          <div class="tweet-contents">
+            <p class="user-name">KALYJAY <span class="handle"><small>@</small>gyaigyimii ·1h</span></p>
+            <p class="atweet">So ibi this same Ghs 1500 salary we go use marry, build house then buy car?
+            </p>
+            <div class="reactions">
+              <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-comments-32.png" alt="">
+                <div class="tooltip">comments</div>
+              </div>
+              <div class="tweet-reactions2"><img class="tweet-reactions" src="../tweet/icons8-retweet-24.png" alt="">
+                <div class="tooltip">repost</div>
+              </div>
+              <div class="tweet-reactions3"><img class="tweet-reactions" src="../tweet/icons8-heart-50.png" alt="">
+                <div class="tooltip">like</div>
+              </div>
+              <div class="tweet-reactions4"><img class="tweet-reactions" src="../tweet/icons8-analytics-64.png" alt="">
+                <div class="tooltip">views</div>
+              </div>
+              <div class="b-s">
+                <span style="padding-right: 5px;">
+                  <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-bookmark-32.png"
+                      alt=""></div>
+                </span>
+                <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-share-32.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tweet1">
+          <div class="menu-pp1"> <img class="menu-pp" src="../images/23_CANFs_400x400.jpg" alt=""></div>
+          <div class="tweet-contents">
+            <p class="user-name">nana.k <span class="handle"><small>@</small>_bxffour ·3h</span></p>
+            <p class="atweet">The country cast charley herhhh....
+            </p>
+            <div class="reactions">
+              <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-comments-32.png" alt="">
+                <div class="tooltip">comments</div>
+              </div>
+              <div class="tweet-reactions2"><img class="tweet-reactions" src="../tweet/icons8-retweet-24.png" alt="">
+                <div class="tooltip">repost</div>
+              </div>
+              <div class="tweet-reactions3"><img class="tweet-reactions" src="../tweet/icons8-heart-50.png" alt="">
+                <div class="tooltip">like</div>
+              </div>
+              <div class="tweet-reactions4"><img class="tweet-reactions" src="../tweet/icons8-analytics-64.png" alt="">
+                <div class="tooltip">views</div>
+              </div>
+              <div class="b-s">
+                <span style="padding-right: 5px;">
+                  <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-bookmark-32.png"
+                      alt=""></div>
+                </span>
+                <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-share-32.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tweet1">
+          <div class="menu-pp1"> <img class="menu-pp" src="../images/wiRjSQGg_400x400.jpg" alt=""></div>
+          <div class="tweet-contents">
+            <p class="user-name">Danger_ <span class="handle"><small>@</small>Danger_Hazard10 ·5h</span></p>
+            <p class="atweet">Liverpool go score we this final bro
+            </p>
+            <div class="reactions">
+              <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-comments-32.png" alt="">
+                <div class="tooltip">comments</div>
+              </div>
+              <div class="tweet-reactions2"><img class="tweet-reactions" src="../tweet/icons8-retweet-24.png" alt="">
+                <div class="tooltip">repost</div>
+              </div>
+              <div class="tweet-reactions3"><img class="tweet-reactions" src="../tweet/icons8-heart-50.png" alt="">
+                <div class="tooltip">like</div>
+              </div>
+              <div class="tweet-reactions4"><img class="tweet-reactions" src="../tweet/icons8-analytics-64.png" alt="">
+                <div class="tooltip">views</div>
+              </div>
+              <div class="b-s">
+                <span style="padding-right: 5px;">
+                  <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-bookmark-32.png"
+                      alt=""></div>
+                </span>
+                <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-share-32.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tweet1">
+          <div class="menu-pp1"> <img class="menu-pp" src="../images/kalyjay.jpg" alt=""></div>
+          <div class="tweet-contents">
+            <p class="user-name">KALYJAY <span class="handle"><small>@</small>gyaigyimii ·1h</span></p>
+            <p class="atweet">Ghana x Nigeria
+            </p>
+            <p>
+              We are one people.
+            </p>
+            <div><img class="tl-picture" src="../GGs4qCBW0AAdjKG.jpeg" alt=""></div>
+
+
+
+
+
+
+            <div class="reactions">
+              <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-comments-32.png" alt="">
+                <div class="tooltip">comments</div>
+              </div>
+              <div class="tweet-reactions2"><img class="tweet-reactions" src="../tweet/icons8-retweet-24.png" alt="">
+                <div class="tooltip">repost</div>
+              </div>
+              <div class="tweet-reactions3"><img class="tweet-reactions" src="../tweet/icons8-heart-50.png" alt="">
+                <div class="tooltip">like</div>
+              </div>
+              <div class="tweet-reactions4"><img class="tweet-reactions" src="../tweet/icons8-analytics-64.png" alt="">
+                <div class="tooltip">views</div>
+              </div>
+              <div class="b-s">
+                <span style="padding-right: 5px;">
+                  <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-bookmark-32.png"
+                      alt=""></div>
+                </span>
+                <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-share-32.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="tweet1">
+          <div class="menu-pp1"> <img class="menu-pp" src="../tweet/14sXD6gU_400x400.jpg" alt=""></div>
+          <div class="tweet-contents">
+            <p class="user-name">Trey_ <span class="handle"><small>@</small>realnigga ·5h</span></p>
+            <p class="atweet">Women are a blessing. Y'all should stop playing.
+            </p>
+            <div class="reactions">
+              <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-comments-32.png" alt="">
+                <div class="tooltip">comments</div>
+              </div>
+              <div class="tweet-reactions2"><img class="tweet-reactions" src="../tweet/icons8-retweet-24.png" alt="">
+                <div class="tooltip">repost</div>
+              </div>
+              <div class="tweet-reactions3"><img class="tweet-reactions" src="../tweet/icons8-heart-50.png" alt="">
+                <div class="tooltip">like</div>
+              </div>
+              <div class="tweet-reactions4"><img class="tweet-reactions" src="../tweet/icons8-analytics-64.png" alt="">
+                <div class="tooltip">views</div>
+              </div>
+              <div class="b-s">
+                <span style="padding-right: 5px;">
+                  <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-bookmark-32.png"
+                      alt=""></div>
+                </span>
+                <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-share-32.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="tweet1">
+          <div class="menu-pp1"> <img class="menu-pp" src="../tweet/5FFyUXqf_400x400.jpg" alt=""></div>
+          <div class="tweet-contents">
+            <p class="user-name">2000's POP <span class="handle"><small>@</small>pop ·1h</span></p>
+            <p class="atweet">Cara OMG!!!!!!!
+            </p>
+
+            <div><img class="tl-picture" src="../tweet/GHECDabXAAAH_uV.jpeg" alt=""></div>
+
+
+
+
+
+
+            <div class="reactions">
+              <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-comments-32.png" alt="">
+                <div class="tooltip">comments</div>
+              </div>
+              <div class="tweet-reactions2"><img class="tweet-reactions" src="../tweet/icons8-retweet-24.png" alt="">
+                <div class="tooltip">repost</div>
+              </div>
+              <div class="tweet-reactions3"><img class="tweet-reactions" src="../tweet/icons8-heart-50.png" alt="">
+                <div class="tooltip">like</div>
+              </div>
+              <div class="tweet-reactions4"><img class="tweet-reactions" src="../tweet/icons8-analytics-64.png" alt="">
+                <div class="tooltip">views</div>
+              </div>
+              <div class="b-s">
+                <span style="padding-right: 5px;">
+                  <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-bookmark-32.png"
+                      alt=""></div>
+                </span>
+                <div class="tweet-reactions1"><img class="tweet-reactions" src="../tweet/icons8-share-32.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="INFO">
+        <div class="subscribe">
+          <div class="cons">
+            <p class="head">Subscribe to Premium</p>
+            <p class="contents">Subscribe to unlock new features and if eligible, receive a share of ads revenue.</p>
+            <button class="sub-butt">Subscribe</button>
+          </div>
+          <div class="trends-list">
+            <div class="trends-contents">
+              <p class="head-trends">Trends for you</p>
+              <div class="trends">
+                <p class="activity">Sports&middot; Trending <span class="tweet-dots">&hellip;</span></p>
+                <p class="t-name">Thomas Tuchel</p>
+                <p class="posts">35.8k posts</p>
+              </div>
+              <div class="trends">
+                <p class="activity">Sports&middot; Trending<span class="tweet-dots">&hellip;</span></p>
+                <p class="t-name">Otto Addo</p>
+                <p class="posts">2.9k posts</p>
+              </div>
+              <div class="trends">
+                <p class="activity">Trending in Ghana <span class="tweet-dots">&hellip;</span></p>
+                <p class="t-name">Oliver Khan</p>
+                <p class="posts">3.5k posts</p>
+              </div>
+              <div class="trends">
+                <p class="activity">Sports&middot; Trending <span class="tweet-dots">&hellip;</span></p>
+                <p class="t-name">Eden Hazard</p>
+                <p class="posts">10.5k posts</p>
+              </div>
+              <div class="trends">
+                <p class="activity">Entertainment&middot; Trending <span class="tweet-dots">&hellip;</span></p>
+                <p class="t-name">Elsa Majimbo</p>
+                <p class="posts">65.9k posts</p>
+              </div>
+              <div class="trends">
+                <p class="activity">Trending in Ghana <span class="tweet-dots">&hellip;</span></p>
+                <p class="t-name">Charles Taylor</p>
+                <p class="posts">10.5k posts</p>
+              </div>
+              <div class="trends">
+                <p class="activity">Sports&middot; Trending <span class="tweet-dots">&hellip;</span></p>
+                <p class="t-name">Liverpool</p>
+                <p class="posts">10.5k posts</p>
+              </div>
+              <div style="margin-left: 14px;">
+                <p class="show">Show more.....</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="follow-suggestions">
+
+            <div>
+              <p
+                style="margin-left: 15px; padding-top: 10px; font-family: roboto, arial; font-weight: bold; font-size: larger;">
+                Who to follow</p>
+              <div class="account-suggestions">
+
+                <div
+                  style="display: inline-block; width: 50px; vertical-align: top; margin-right: 5px; margin-top: 5px;">
+                  <img class="follow-pp" src="../tweet/pTDaFTS6_400x400.jpg">
+                </div>
+                <div style="display: inline-block; line-height: 23px; vertical-align: top; padding-top: 0; ">
+                  <div style="font-family: roboto, arial; font-weight: bold;margin-top: 5px; ">Hazel Kaizoku</div>
+                  <div style="color: #555;">@meister_kwame</div>
+                </div>
+                <div style="display: inline-block; "><button style="margin-left: 50px;
+                 padding-left: 15px; padding-right: 15px; padding-top: 8px; margin-top: 14px;
+                  padding-bottom: 8px; border-radius: 20px; 
+                  font-family: roboto, arial; font-weight: bold; 
+                  border: none; background-color: black; color: white;">Follow</button></div>
+              </div>
+            </div>
+            <div>
+              <div class="account-suggestions">
+                <div
+                  style="display: inline-block; width: 50px; vertical-align: top; margin-right: 5px; margin-top: 5px;">
+                  <img class="follow-pp" src="../images/eFDRl4U6_400x400.png">
+                </div>
+                <div style="display: inline-block; line-height: 23px; vertical-align: top; padding-top: 0; ">
+                  <div style="font-family: roboto, arial; font-weight: bold;margin-top: 5px; ">Charles Green</div>
+                  <div style="color: #555;">@_mr.green</div>
+                </div>
+                <div style="display: inline-block; "><button style="margin-left: 70px;
+                 padding-left: 15px; padding-right: 15px; padding-top: 8px;
+                  padding-bottom: 8px; border-radius: 20px; margin-top: 14px;
+                  font-family: roboto, arial; font-weight: bold; 
+                  border: none; background-color: black; color: white;">Follow</button></div>
+              </div>
+            </div>
+            <div>
+              <div class="account-suggestions">
+
+                <div
+                  style="display: inline-block; width: 50px; vertical-align: top; margin-right: 5px; margin-top: 5px;">
+                  <img class="follow-pp" src="../tweet/tQ_TFc11_400x400.jpg">
+                </div>
+                <div style="display: inline-block; line-height: 23px; vertical-align: top; padding-top: 0; ">
+                  <div style="font-family: roboto, arial; font-weight: bold;margin-top: 5px; ">Kojo</div>
+                  <div style="color: #555;">@real_k</div>
+                </div>
+
+                <div style="display: inline-block;  "><button style="margin-left: 120px;
+                 padding-left: 15px; padding-right: 15px; padding-top: 8px;
+                  padding-bottom: 8px; border-radius: 20px; margin-top: 14px;
+                  font-family: roboto, arial; font-weight: bold; 
+                  border: none; background-color: black; color: white;">Follow</button>
+                </div>
+              </div>
+            </div>
+            <p style=" margin-left: 18px; color: #1d9bf0; font-family: roboto, arial; ">Show more...</p>
+          </div>
+          <div
+            style="display: inline-block; line-height:1px; margin-top: 15px; font-size: 14px; color:gray; margin-left: 15px;  ">
+            <p style="display: inline-block; padding-right: 15px;">Terms of Service</p>
+            <p style="display: inline-block; padding-right: 15px;">Privacy Policy</p>
+            <p style="display: inline-block; ">Cookie Policy</p>
+            <p style="display: inline-block; padding-right: 15px;">Accessibility</p>
+            <p style="display: inline-block; padding-right: 15px;">Ads info </p>
+            <p style="display: inline-block; padding-right: 15px;">More&middot;&middot;&middot;</p>
+            <p style="display: inline-block;">&copy 2024 X Corp.</p>
+          </div>
+        </div>
+
+</body>
+
+</html>
